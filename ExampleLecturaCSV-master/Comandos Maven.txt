@@ -1,0 +1,30 @@
+Situándose en el directorio donde está el fichero pom.xml, podemos ejecutar cualquiera de los siguiente comandos. Cuando decimos jar, queremos realmente decir el fichero 
+resultado de la compilación y empaquetado, que puede ser jar, war, ear, ...
+
+    mvn clean Borra todos los .class y .jar generados.
+    mvn compile Compila el proyecto.
+    mvn package Genera el jar.
+    mvn install LLeva el jar a nuestro repositorio local de jars. Queda "visible" para otros proyectos maven en nuestro ordenador.
+    mvn deploy Lleva el jar a nuestro servidor de jars. Queda "visible" para otros proyectos maven en otros ordenadores. Este comando necesita que a maven se le haya indicado 
+	    dónde está dicho servidor de jars.
+    mvn javadoc:javadoc Genera la documentación javadoc de nuestro proyecto.
+    mvn site Genera documentación html del proyecto. Por supuesto, necesitamos haber escrito en determinados ficheros el contenido de esa documentación.
+
+Pueden ser útiles comandos como
+
+    mvn eclipse:eclipse que nos genera los ficheros típicos de un proyecto eclipse, de forma que podemos importar el proyecto directamente en nuestro entorno de desarrollo eclipse. 
+	(Ver Integración de Maven y Eclipse)
+    mvn idea:idea igual, pero para el entorno de desarrollo IntelliJ IDEA.
+	
+	
+    compile – es el valor por defecto. Se utiliza en todos los casos (compilar, ejecutar, …).
+    provided – también se utiliza en todos los casos, pero se espera que el jar sea suministrado por la JDK o el contenedor. Es decir, no se incluirá al 
+	           empaquetar el proyecto, ni en el repositorio.
+    runtime – no se utiliza para compilar, pero si es necesario para ejecutar.
+    test – Sólo se utiliza para compilar o ejecutar los test.
+    system – es similar a provided, pero eres tu el que tiene que suministrar el jar. No se incluirá al empaquetar el proyecto, ni en el repositorio.
+	
+	
+	https://maven.apache.org/guides/introduction/introduction-to-dependency-mechanism.html
+	
+	Revisar la filmina del curso
